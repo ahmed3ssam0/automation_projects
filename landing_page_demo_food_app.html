@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food App Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card:hover { transform: translateY(-8px) scale(1.03); }
+  </style>
+</head>
+<body class="font-sans">
+
+<!-- Header -->
+<header class="flex justify-between items-center p-4 shadow sticky top-0 bg-white z-50">
+  <div class="text-xl font-bold">🍔 LOGO</div>
+  <nav class="space-x-4">
+    <a href="#" class="hover:text-gray-500">Home</a>
+    <a href="#" class="hover:text-gray-500">Menu</a>
+    <a href="#" class="hover:text-gray-500">Offers</a>
+    <a href="#" class="hover:text-gray-500">About Us</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="text-center py-20 bg-gray-100 fade-in">
+  <h1 class="text-4xl font-bold mb-4">اطلب أكلك المفضل في ثواني 🚀</h1>
+  <p class="mb-6 text-gray-600">أفضل المطاعم + أسرع دليفري + عروض جامدة</p>
+  <button class="bg-black text-white px-6 py-3 rounded-lg hover:scale-105 transition">اطلب الآن</button>
+</section>
+
+<!-- Offers -->
+<section class="text-center py-12 fade-in">
+  <h2 class="text-3xl font-bold">🔥 خصم 25% على أول طلب</h2>
+</section>
+
+<!-- Why Us -->
+<section class="py-16 bg-gray-100 text-center fade-in">
+  <h2 class="text-3xl font-bold mb-10">ليه تختارنا؟</h2>
+  <div class="flex flex-wrap justify-center gap-10">
+    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition">
+      <p class="text-3xl mb-2">🚀</p>
+      <p>دليفري سريع</p>
+    </div>
+    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition">
+      <p class="text-3xl mb-2">✅</p>
+      <p>مطاعم موثوقة</p>
+    </div>
+    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition">
+      <p class="text-3xl mb-2">💸</p>
+      <p>عروض مستمرة</p>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="py-16 text-center fade-in">
+  <h2 class="text-3xl font-bold mb-10">المنيو</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6">
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?burger" class="w-full h-40 object-cover">
+      <div class="p-4">Burger - 120 EGP</div>
+    </div>
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?pizza" class="w-full h-40 object-cover">
+      <div class="p-4">Pizza - 150 EGP</div>
+    </div>
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?pasta" class="w-full h-40 object-cover">
+      <div class="p-4">Pasta - 100 EGP</div>
+    </div>
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?fried-chicken" class="w-full h-40 object-cover">
+      <div class="p-4">Chicken - 130 EGP</div>
+    </div>
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?sandwich" class="w-full h-40 object-cover">
+      <div class="p-4">Sandwich - 80 EGP</div>
+    </div>
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?salad" class="w-full h-40 object-cover">
+      <div class="p-4">Salad - 70 EGP</div>
+    </div>
+
+    <div class="card transition duration-300 bg-white rounded-2xl shadow overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?dessert" class="w-full h-40 object-cover">
+      <div class="p-4">Dessert - 60 EGP</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- App Download -->
+<section class="py-16 bg-gray-100 text-center fade-in">
+  <h2 class="text-3xl font-bold mb-6">حمل التطبيق الآن 📱</h2>
+  <div class="space-x-4">
+    <button class="bg-black text-white px-6 py-3 rounded-lg hover:scale-105 transition">Android</button>
+    <button class="bg-black text-white px-6 py-3 rounded-lg hover:scale-105 transition">iOS</button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white text-center py-8">
+  <p>© 2026 All Rights Reserved</p>
+  <div class="mt-4 space-x-6 text-lg">
+    <span class="hover:text-gray-400 cursor-pointer">📘</span>
+    <span class="hover:text-gray-400 cursor-pointer">📸</span>
+    <span class="hover:text-gray-400 cursor-pointer">💬</span>
+  </div>
+</footer>
+
+</body>
+</html>
