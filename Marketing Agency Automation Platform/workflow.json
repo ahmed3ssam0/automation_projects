@@ -1,5 +1,5 @@
 {
-  "name": "My workflow",
+  "name": "workflow",
   "nodes": [
     {
       "parameters": {
@@ -224,7 +224,7 @@
           "parameters": [
             {
               "name": "api-key",
-              "value": "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"
+              "value": "YOUR_BREVO_API_KEY"
             },
             {
               "name": "Content-Type",
