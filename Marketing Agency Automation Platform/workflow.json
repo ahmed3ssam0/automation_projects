@@ -1,0 +1,334 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "6d1521e2-e48b-4f42-a3b1-f8f6706737df",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        -48
+      ],
+      "id": "210dfa38-a6bb-4e27-b510-265410dcd8a0",
+      "name": "Webhook",
+      "webhookId": "6d1521e2-e48b-4f42-a3b1-f8f6706737df"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bee12756-58c8-4dd9-8177-f593777d3c65",
+              "name": "Company Name",
+              "value": "={{ $json.body.company_name }}",
+              "type": "string"
+            },
+            {
+              "id": "d29f2938-6a38-437d-897b-c54e08b671c5",
+              "name": "Owner Name",
+              "value": "={{ $json.body.owner_name }}",
+              "type": "string"
+            },
+            {
+              "id": "a673eef3-785d-4ddf-8868-04e55bc06a53",
+              "name": "Business Type",
+              "value": "={{ $json.body.business_type }}",
+              "type": "string"
+            },
+            {
+              "id": "dee353f8-bfa8-4956-8ce8-5f86cb05db57",
+              "name": "Website",
+              "value": "={{ $json.body.website }}",
+              "type": "string"
+            },
+            {
+              "id": "cc0234d2-6372-4b76-9648-0e127cf43af3",
+              "name": "Marketing Budget",
+              "value": "={{ $json.body.marketing_budget }}",
+              "type": "string"
+            },
+            {
+              "id": "435b0437-a3da-491d-b031-8b093d2fcd9c",
+              "name": "Phone",
+              "value": "={{ $json.body.phone }}",
+              "type": "string"
+            },
+            {
+              "id": "f8916d1c-2efe-4f70-9d6b-61737b5b87dc",
+              "name": "Email",
+              "value": "={{ $json.body.email }}",
+              "type": "string"
+            },
+            {
+              "id": "e0f56b44-c557-4728-a550-a676282341db",
+              "name": "Notes",
+              "value": "={{ $json.body.additional_notes }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        -48
+      ],
+      "id": "0df05fd5-daa2-4d87-9ab9-fda0b7d07408",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1wO3JB41HVqvWy358MGbLvU2diIF4lzjBSzVS1Ql1CAw",
+          "mode": "list",
+          "cachedResultName": "companies_data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wO3JB41HVqvWy358MGbLvU2diIF4lzjBSzVS1Ql1CAw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wO3JB41HVqvWy358MGbLvU2diIF4lzjBSzVS1Ql1CAw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Company Name": "={{ $json['Company Name'] }}",
+            "Owner Name": "={{ $json['Owner Name'] }}",
+            "Business Type": "={{ $json['Business Type'] }}",
+            "Website": "={{ $json.Website }}",
+            "Marketing Budget": "={{ $json['Marketing Budget'] }}",
+            "Phone": "={{ $json.Phone }}",
+            "Email": "={{ $json.Email }}",
+            "Notes": "={{ $json.Notes }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Owner Name",
+              "displayName": "Owner Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Business Type",
+              "displayName": "Business Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Website",
+              "displayName": "Website",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Marketing Budget",
+              "displayName": "Marketing Budget",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Notes",
+              "displayName": "Notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        448,
+        48
+      ],
+      "id": "ac8859a9-3c28-48b3-a0b1-05da158f30b5",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "M0wNkbUt7JxnbBwc",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.brevo.com/v3/smtp/email",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api-key",
+              "value": "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"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"sender\": {\n    \"name\": \"BrandFlow\",\n    \"email\": \"ahmedessamsh9621@gmail.com\"\n  },\n  \"to\": [\n    {\n      \"email\": \"{{ $json.Email }}\"\n    }\n  ],\n  \"subject\": \"Welcome!\",\n  \"htmlContent\": \"<h2>Welcome!</h2><p>Thank you for registering.</p>\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        448,
+        -144
+      ],
+      "id": "0f6b21ae-6290-4d04-b384-411e5e864fd6",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n    \"success\":true,\n    \"message\":\"Registration completed.\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        672,
+        -48
+      ],
+      "id": "9cd0abef-cd8f-493a-8655-589f90a9c88c",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "40baa52c-27d5-48d0-8f08-b47740e29bf2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0768015a690635ddf423a980adbec02fd344753e4734e56490c190e398b17d55"
+  },
+  "nodeGroups": [],
+  "id": "4zL3y4kktE2FvQlX",
+  "tags": []
+}
