@@ -1,0 +1,3412 @@
+{
+  "name": "Dental Telegram Bot - Booking and Other Services",
+  "nodes": [
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "book",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "5c0e443b-4492-40bc-9663-f3a1c9361987"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "book"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "89cf15c4-e6bb-45a6-8f79-85d9e2a3cee0",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "service",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "service"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "09591f88-61a8-4d78-9f76-a2b8bbaa96a4",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "price",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "price"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "10b344da-1705-4647-bc1d-052bb7e1fd67",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "location",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "location"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "226c1040-4ce1-4003-89f8-2ee7e93f8d9a",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "connect",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "connect"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "61bedba7-6647-4c98-ab43-e03bbd4c41fa",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "time",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "time"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "cancel",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f1310309-ce2d-4e5f-bee5-058c7cc73e2e"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "cancel"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "/start",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "7a3f155c-409c-4596-9f3f-a3d018fa3546"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "start"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "/menu",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "85825b19-368c-47a9-9967-8fc636446d3d"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "menu"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "08081c18-9465-4802-8ada-d864c5a10493",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "main_menu",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "main_menu"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a7e0db85-3847-4a22-be71-8be1b02e5db9",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "health_menu",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "health_menu"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -1664,
+        2672
+      ],
+      "id": "102589c5-d107-4036-b46b-cc51788e97be",
+      "name": "Main Menu Router"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "User ID": "={{ $('Data Normalizer').item.json.user_id }}",
+            "State": "waiting_for_day"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Selected Date",
+              "displayName": "Selected Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Service",
+              "displayName": "Service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "State",
+              "displayName": "State",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Day",
+              "displayName": "Day",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -992,
+        2592
+      ],
+      "id": "9b9fdc9b-1f08-4850-a631-38b9d309d4c4",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $('Data Normalizer').item.json.chat_id }}\",\n  \"text\": \"عند بداية عملية الحجز برجاء عدم مقاطعة العملية بطلب خدمة اخرى وان فعلت يرجى في بداية عملية الحجز من جديد\\n\\nمن فضلك اختر اليوم المناسب للحجز:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"السبت\",\n          \"callback_data\": \"sat\"\n        },\n        {\n          \"text\": \"الأحد\",\n          \"callback_data\": \"sun\"\n        }\n      ],\n      [\n        {\n          \"text\": \"الإثنين\",\n          \"callback_data\": \"mon\"\n        },\n        {\n          \"text\": \"الثلاثاء\",\n          \"callback_data\": \"tue\"\n        }\n      ],\n      [\n        {\n          \"text\": \"الأربعاء\",\n          \"callback_data\": \"wed\"\n        },\n        {\n          \"text\": \"الخميس\",\n          \"callback_data\": \"thu\"\n        },\n        {\n          \"text\": \"الجمعة\",\n          \"callback_data\": \"fri\"\n        }\n      ]\n    ]\n  }\n}",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -768,
+        2352
+      ],
+      "id": "d6c85253-adcb-40a7-9353-60387c370beb",
+      "name": "Ask for Day"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "14xKRuts6BT-vSdZdfJUENQiRUiimajfpa7GpnzAb5Hc",
+          "mode": "list",
+          "cachedResultName": "Schedule",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14xKRuts6BT-vSdZdfJUENQiRUiimajfpa7GpnzAb5Hc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14xKRuts6BT-vSdZdfJUENQiRUiimajfpa7GpnzAb5Hc/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -3008,
+        1728
+      ],
+      "id": "1f4622f7-fa60-4809-991c-d15b07d1f724",
+      "name": "Get Schedule",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.State }}",
+                    "rightValue": "waiting_for_day",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f3672031-5a24-42e1-a5c3-94ecd615ac5c"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "waiting_for_day"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1b66e04e-8d8e-4606-bcbe-bdfb3d9131e9",
+                    "leftValue": "={{ $json.State }}",
+                    "rightValue": "waiting_for_service",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "waiting_for_service"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "755345d8-9ea5-418c-afde-c4cb2720d1f7",
+                    "leftValue": "={{ $json.State }}",
+                    "rightValue": "waiting_for_name",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "waiting_for_name"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "894455b9-35be-4d03-8e69-d0d0b821b458",
+                    "leftValue": "={{ $json.State }}",
+                    "rightValue": "waiting_for_phone",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "waiting_for_phone"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.State }}",
+                    "rightValue": "waiting_for_confirmation",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "waiting_for_confirmation"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -3456,
+        2000
+      ],
+      "id": "130eaccc-f060-42e4-bc55-ff5386cb8f60",
+      "name": "Session Router"
+    },
+    {
+      "parameters": {
+        "jsCode": "const selectedDay = $('Data Normalizer').item.json.value;\nconst userId = $('Data Normalizer').item.json.user_id;\n\nconst days = {\n  sat: \"Saturday\",\n  sun: \"Sunday\",\n  mon: \"Monday\",\n  tue: \"Tuesday\",\n  wed: \"Wednesday\",\n  thu: \"Thursday\",\n  fri: \"Friday\"\n};\n\nif (!days[selectedDay]) {\n  return [{\n    json: {\n      user_id: userId,\n      selected_day: null,\n      error: \"invalid_day\",\n      received_value: selectedDay\n    }\n  }];\n}\n\nreturn [{\n  json: {\n    user_id: userId,\n    selected_day: days[selectedDay]\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3232,
+        1728
+      ],
+      "id": "9730e80b-9eb2-44d5-ae79-91081b2c46e3",
+      "name": "Process Selected Day"
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst userId =\n  $json.callback_query?.from?.id?.toString() ||\n  $json.message?.from?.id?.toString();\n\nif (!userId) return [];\n\nconst isCallback = !!$json.callback_query;\nconst value = isCallback\n  ? ($json.callback_query.data || '')\n  : ($json.message?.text || '').trim();\n\nreturn [{\n  json: {\n    user_id: userId,\n    chat_id: ($json.callback_query?.message?.chat?.id ?? $json.message?.chat?.id ?? userId).toString(),\n    message_type: isCallback ? 'callback_query' : 'text',\n    value,\n    text: isCallback ? '' : ($json.message?.text || '').trim(),\n    callback_query_id: $json.callback_query?.id || null\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4800,
+        2816
+      ],
+      "id": "c667d6c6-c8de-4620-a0bf-2280c6818895",
+      "name": "Data Normalizer"
+    },
+    {
+      "parameters": {
+        "jsCode": "const selectedDay = $('Process Selected Day').item.json.selected_day;\nconst userId = $('Process Selected Day').item.json.user_id;\n\n// Find the selected day in Schedule\nconst schedule = $input.all().find(item => {\n  return item.json.Day === selectedDay;\n});\n\nif (!schedule) {\n  return [{\n    json: {\n      user_id: userId,\n      selected_day: selectedDay,\n      available: false,\n      reason: \"day_not_found\"\n    }\n  }];\n}\n\nconst data = schedule.json;\n\n// Check if the clinic works on this day\nconst active = String(data.Active).toLowerCase() === \"true\";\n\nif (!active) {\n  return [{\n    json: {\n      user_id: userId,\n      selected_day: selectedDay,\n      available: false,\n      reason: \"day_closed\"\n    }\n  }];\n}\n\nreturn [{\n  json: {\n    user_id: userId,\n    selected_day: selectedDay,\n    available: true,\n    start_time: data[\"Start Time\"],\n    end_time: data[\"End Time\"],\n    max_patients: Number(data[\"Max Patients\"])\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2784,
+        1728
+      ],
+      "id": "4376b376-2c81-4514-bb6c-61a39711670e",
+      "name": "Check Day Availability"
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst selectedDay = $json.selected_day;\nconst userId = $json.user_id;\n\nconst dayNumbers = {Sunday:7, Monday:1, Tuesday:2, Wednesday:3, Thursday:4, Friday:5, Saturday:6};\nconst targetDay = dayNumbers[selectedDay];\nif (!targetDay) return [{json:{...$json,error:\"invalid_day\"}}];\n\nconst now = new Date(new Date().toLocaleString(\"en-US\",{timeZone:\"Africa/Cairo\"}));\nconst currentDay = now.getDay() === 0 ? 7 : now.getDay();\nlet daysUntil = targetDay - currentDay;\nif (daysUntil < 0) daysUntil += 7;\n\n// If today was selected but clinic hours are already over, use next week.\nif (daysUntil === 0 && $json.end_time) {\n  const [h,m] = String($json.end_time).split(':').map(Number);\n  if (Number.isFinite(h) && Number.isFinite(m) &&\n      (now.getHours() > h || (now.getHours() === h && now.getMinutes() >= m))) {\n    daysUntil = 7;\n  }\n}\n\nconst bookingDate = new Date(now);\nbookingDate.setDate(now.getDate() + daysUntil);\n\nconst date = `${bookingDate.getFullYear()}-${String(bookingDate.getMonth()+1).padStart(2,\"0\")}-${String(bookingDate.getDate()).padStart(2,\"0\")}`;\nreturn [{json:{...$json,booking_date:date}}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2560,
+        1728
+      ],
+      "id": "930b3bfc-c25b-41a3-8db1-ff2e3ee31e16",
+      "name": "Calculate Booking Date"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1_NedC7TTY1nlGNOsKtULmVxOnQCbzfgcNy8gbq9LAsU",
+          "mode": "list",
+          "cachedResultName": "Bookings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_NedC7TTY1nlGNOsKtULmVxOnQCbzfgcNy8gbq9LAsU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_NedC7TTY1nlGNOsKtULmVxOnQCbzfgcNy8gbq9LAsU/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Date",
+              "lookupValue": "={{ $('Get Session Final').item.json['Selected Date'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2784,
+        2112
+      ],
+      "id": "946f3e49-2999-4e83-b569-7efbaa4823dd",
+      "name": "Get Bookings",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bookings = $('Get Bookings').all();\nconst bookingData = $('Get Session Final').item.json;\n\nconst bookingDate = String(bookingData['Selected Date'] || '');\nconst userId = String(bookingData['User ID'] || '');\n\nfunction real(item) {\n  return item?.json && Object.values(item.json).some(\n    v => v !== null && v !== undefined && v !== ''\n  );\n}\n\nconst realBookings = bookings.filter(real);\n\nconst duplicate = realBookings.find(b =>\n  String(b.json['User ID'] || '') === userId &&\n  String(b.json.Date || '') === bookingDate &&\n  String(b.json.Status || '').toLowerCase() !== 'cancelled'\n);\n\nconst queueNumber = realBookings.length + 1;\nconst maxPatients = Number($input.first().json['Max Patients'] || 0);\n\nreturn [{\n  json: {\n    user_id: userId,\n    booking_date: bookingDate,\n    name: bookingData.Name,\n    phone: bookingData.Phone,\n    service: bookingData.Service,\n    day: bookingData.Day,\n    queue_number: queueNumber,\n    max_patients: maxPatients,\n    bookings_count: realBookings.length,\n\n    // TRUE = this user already has a booking on this date\n    duplicate: !!duplicate,\n\n    // Availability is false if duplicate OR clinic is full\n    available: !duplicate && queueNumber <= maxPatients,\n\n    duplicate_booking: duplicate?.json || null\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2336,
+        2112
+      ],
+      "id": "a86ad6c1-874e-4bb2-bdf1-eb4823e94eec",
+      "name": "Calculate Queue Number"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1_NedC7TTY1nlGNOsKtULmVxOnQCbzfgcNy8gbq9LAsU",
+          "mode": "list",
+          "cachedResultName": "Bookings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_NedC7TTY1nlGNOsKtULmVxOnQCbzfgcNy8gbq9LAsU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_NedC7TTY1nlGNOsKtULmVxOnQCbzfgcNy8gbq9LAsU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Queue Number": "={{ $json.queue_number }}",
+            "Status": "Confirmed",
+            "Booking ID": "={{ $json.user_id + '-' + $json.booking_date }}",
+            "Service": "={{ $('Get Session Final').item.json.Service }}",
+            "Phone": "={{ $('Get Session Final').item.json.Phone }}",
+            "Name": "={{ $('Get Session Final').item.json.Name }}",
+            "Date": "={{ $json.booking_date }}",
+            "Day": "={{ $json.day }}",
+            "User ID": "={{ $('Data Normalizer').item.json.user_id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Service",
+              "displayName": "Service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Queue Number",
+              "displayName": "Queue Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Day",
+              "displayName": "Day",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Booking ID",
+              "displayName": "Booking ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1888,
+        2048
+      ],
+      "id": "2cbf5b7e-21e4-48f8-b77c-cb02060008d5",
+      "name": "Create Booking",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "User ID": "={{ $json.user_id }}",
+            "State": "waiting_for_name",
+            "Service": "={{ $json.selected_service }}"
+          },
+          "matchingColumns": [
+            "User ID"
+          ],
+          "schema": [
+            {
+              "id": "Selected Date",
+              "displayName": "Selected Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Service",
+              "displayName": "Service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "State",
+              "displayName": "State",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -3008,
+        1536
+      ],
+      "id": "991f54ad-9e71-410e-a46b-511c2a55da8f",
+      "name": "Update Session - Service",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json['User ID'] }}\",\n  \"text\": \"من فضلك اختر الخدمة المناسبة:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🦷 كشف\",\n          \"callback_data\": \"check\"\n        },\n        {\n          \"text\": \"🪥 تنظيف جير\",\n          \"callback_data\": \"clean\"\n        }\n      ],\n      [\n        {\n          \"text\": \"✨ توريد لثة\",\n          \"callback_data\": \"gum\"\n        },\n        {\n          \"text\": \"😁 تقويم\",\n          \"callback_data\": \"ortho\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🦷 خلع\",\n          \"callback_data\": \"extract\"\n        },\n        {\n          \"text\": \"🦷 حشو عادي\",\n          \"callback_data\": \"filling\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🦷 حشو عصب\",\n          \"callback_data\": \"root\"\n        },\n        {\n          \"text\": \"✨ تبييض بالليزر\",\n          \"callback_data\": \"laser_white\"\n        }\n      ]\n    ]\n  }\n}",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -2112,
+        1728
+      ],
+      "id": "8da9ad33-0608-4120-a115-211a72475eef",
+      "name": "Ask for Service"
+    },
+    {
+      "parameters": {
+        "jsCode": "const selectedService = $('Data Normalizer').item.json.value;\nconst userId = $('Data Normalizer').item.json.user_id;\n\nconst services = {\n  check: \"كشف\",\n  clean: \"تنظيف جير\",\n  gum: \"توريد لثة\",\n  ortho: \"تقويم\",\n  extract: \"خلع\",\n  filling: \"حشو عادي\",\n  root: \"حشو عصب\",\n  laser_white: \"تبييض بالليزر\"\n};\n\nif (!services[selectedService]) {\n  return [{\n    json: {\n      user_id: userId,\n      selected_service: null,\n      error: \"invalid_service\",\n      received_value: selectedService\n    }\n  }];\n}\n\nreturn [{\n  json: {\n    user_id: userId,\n    selected_service: services[selectedService]\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3232,
+        1536
+      ],
+      "id": "e4bce07a-06ac-4d3f-af90-eb81a8ab0c8c",
+      "name": "Process Selected Service"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "User ID": "={{ $json.user_id }}",
+            "Selected Date": "={{ $json.booking_date }}",
+            "State": "waiting_for_service",
+            "Day": "={{ $json.selected_day }}"
+          },
+          "matchingColumns": [
+            "User ID"
+          ],
+          "schema": [
+            {
+              "id": "Selected Date",
+              "displayName": "Selected Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Service",
+              "displayName": "Service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "State",
+              "displayName": "State",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Day",
+              "displayName": "Day",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2336,
+        1728
+      ],
+      "id": "d703b563-38a6-4aaa-82d0-f4748251e037",
+      "name": "Update Session",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "User ID": "={{ $json.user_id }}",
+            "Name": "={{ $json.name }}",
+            "State": "waiting_for_phone"
+          },
+          "matchingColumns": [
+            "User ID"
+          ],
+          "schema": [
+            {
+              "id": "Selected Date",
+              "displayName": "Selected Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Service",
+              "displayName": "Service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "State",
+              "displayName": "State",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -3008,
+        2304
+      ],
+      "id": "fa550a73-078f-4a5e-b46a-4e193234f9d0",
+      "name": "Update Session - Name",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const name = $('Data Normalizer').item.json.text;\nconst userId = $('Data Normalizer').item.json.user_id;\n\nreturn [{\n  json: {\n    user_id: userId,\n    name: name.trim()\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3232,
+        2304
+      ],
+      "id": "432e69a1-c11d-4682-9ee1-238988a32984",
+      "name": "Process Name"
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst raw = String($('Data Normalizer').item.json.text || '').trim();\nconst userId = $('Data Normalizer').item.json.user_id;\nlet phone = raw.replace(/[^\\d+]/g,'');\n\nif (phone.startsWith('+20')) phone = '0' + phone.slice(3);\nif (phone.startsWith('20') && phone.length === 12) phone = '0' + phone.slice(2);\n\nif (!/^01[0125]\\d{8}$/.test(phone)) {\n  return [{json:{user_id:userId,phone:null,error:\"invalid_phone\"}}];\n}\n\nreturn [{json:{user_id:userId,phone}}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3232,
+        2496
+      ],
+      "id": "acc5c1f2-6e9c-4eb4-b210-67ac546c2e4f",
+      "name": "Process Phone"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "User ID": "={{ $json.user_id }}",
+            "Phone": "={{ $json.phone }}",
+            "State": "waiting_for_confirmation"
+          },
+          "matchingColumns": [
+            "User ID"
+          ],
+          "schema": [
+            {
+              "id": "Selected Date",
+              "displayName": "Selected Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Service",
+              "displayName": "Service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "State",
+              "displayName": "State",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -3008,
+        2496
+      ],
+      "id": "d16acf9d-fe4d-4d4e-91cd-e29af8b46f85",
+      "name": "Update Session - Phone",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "User ID",
+              "lookupValue": "={{ $json['User ID'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -3008,
+        2112
+      ],
+      "id": "6d5cb59d-b160-4cb7-a448-906dd2a6a2e0",
+      "name": "Get Session Final",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "14xKRuts6BT-vSdZdfJUENQiRUiimajfpa7GpnzAb5Hc",
+          "mode": "list",
+          "cachedResultName": "Schedule",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14xKRuts6BT-vSdZdfJUENQiRUiimajfpa7GpnzAb5Hc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14xKRuts6BT-vSdZdfJUENQiRUiimajfpa7GpnzAb5Hc/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Day",
+              "lookupValue": "={{ $('Get Session Final').item.json.Day }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2560,
+        2112
+      ],
+      "id": "4a8df72e-5118-4bab-8d9b-5bc4d44dcc17",
+      "name": "Get Schedule1",
+      "alwaysOutputData": false,
+      "executeOnce": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "0ccb641c-0a4e-4483-92f7-c3cabcb60e38",
+              "leftValue": "={{ $input.all()[0].json }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "object",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -1216,
+        2528
+      ],
+      "id": "2cd1bfec-9761-452b-99b3-c36b97f10fc2",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "User ID",
+              "lookupValue": "={{ $('Data Normalizer').item.json.user_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -4576,
+        2144
+      ],
+      "id": "d287529e-b152-46aa-983e-679e18e5d883",
+      "name": "Get Session",
+      "alwaysOutputData": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "User ID",
+              "lookupValue": "={{ $json.contacts[0].wa_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1440,
+        2528
+      ],
+      "id": "af4b06f6-dd4d-46d3-aae2-729f028ea11d",
+      "name": "Get Session1",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "startIndex": "={{ $('Get Session').item.json.row_number }}"
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1440,
+        1968
+      ],
+      "id": "59cb46fe-ea5f-4c9d-91f8-1845097c3ecc",
+      "name": "Delete Session",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $('Data Normalizer').item.json.chat_id }}\",\n  \"text\": \"أهلاً بيك في عيادة الدكتور مصطفى خالد 🦷\\nمن فضلك اختار من القائمة:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"📅 حجز موعد\",\n          \"callback_data\": \"book\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🦷 الخدمات الصحية\",\n          \"callback_data\": \"service\"\n        },\n        {\n          \"text\": \"💰 الأسعار\",\n          \"callback_data\": \"price\"\n        }\n      ],\n      [\n        {\n          \"text\": \"📍 مكان العيادة\",\n          \"callback_data\": \"location\"\n        }\n      ],\n      [\n        \n        {\n          \"text\": \"📅 المواعيد\",\n          \"callback_data\": \"time\"\n        },\n        {\n          \"text\": \"👨‍💼 تواصل مع موظف\",\n          \"callback_data\": \"connect\"\n        }\n      ]\n    ]\n  }\n}",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -1216,
+        1968
+      ],
+      "id": "e35ac692-f7d4-405f-af44-9b2ef39e053c",
+      "name": "Main Menu"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message",
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        -5024,
+        2816
+      ],
+      "id": "150f1ff3-200c-4809-b67e-331cb7a04622",
+      "name": "Telegram Trigger",
+      "webhookId": "780d998d-587f-4123-a2ba-b21a12ae2d7a",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json['User ID'] }}",
+        "text": "من فضلك اكتب اسمك بالكامل:",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -2784,
+        1536
+      ],
+      "id": "e55f516c-bc72-48cf-990f-adc5f619a066",
+      "name": "Ask for Name",
+      "webhookId": "2808039a-462f-42b0-a5bc-cfe8c205fa8a",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json['User ID'] }}",
+        "text": "من فضلك اكتب رقم الهاتف:",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -2784,
+        2304
+      ],
+      "id": "091e2ce3-e298-4708-9b28-dd387ff98693",
+      "name": "Ask for Phone",
+      "webhookId": "70d7e6fd-d350-423f-8cc5-7541ae847406",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "text": "=✅ تم حجز موعدك بنجاح!\n\n📅 التاريخ: {{ $('Calculate Queue Number').item.json.booking_date }}\n📅 اليوم: {{ $('Calculate Queue Number').item.json.day }}\n🔢 رقم الدور: {{ $('Calculate Queue Number').item.json.queue_number }}\n🦷 الخدمة: {{ $('Calculate Queue Number').item.json.service }}\n👤 الاسم: {{ $('Calculate Queue Number').item.json.name }}\n\nبرجاء الحضور في موعد العيادة. نتمنى لك الشفاء والعافية 🦷❤️",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1664,
+        2048
+      ],
+      "id": "34a1a1ba-330f-4ec9-9d94-8231c9ca8a47",
+      "name": "Send Confirmation",
+      "webhookId": "d92c427b-7e53-41d0-a968-d694c394ebf2",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "text": "📍 القناطر الخيرية - شلقان - الطريق العمومي اعلي كازيون",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1440,
+        2720
+      ],
+      "id": "cc12dd58-0919-4970-9c74-5b9db203a744",
+      "name": "Send Location",
+      "webhookId": "3e41e49a-caa4-4dca-ba16-33973fc75986",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "text": "=💰 أسعار الخدمات\n🦷 الكشف: 100 جنيه\n🪥 تنظيف الجير: 500 جنيه\n✨ توريد اللثة: 700 جنيه\n😁 التقويم: السعر حسب الحالة\n🦷 الخلع: يبدأ من 500 جنيه حسب الحالة\n🦷 الحشو العادي: يبدأ من 1200 جنيه حسب الحالة\n🦷 حشو العصب: يبدأ من 2000 جنيه حسب الحالة\n✨ التبييض بالليزر: 1500 جنيه\n\n📌 ملاحظة: بعض الخدمات يتم تحديد سعرها النهائي بعد الكشف وتقييم الحالة.",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1440,
+        3104
+      ],
+      "id": "7a3c77f0-2e1e-4fc7-b6e0-738a608ad160",
+      "name": "Send Price",
+      "webhookId": "86462267-1cf2-4d6a-9097-3aee826dcf94",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "post_extraction",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "06d74b61-b312-4ecc-9046-db7e172c38cb"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "post_extraction"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "06645091-5090-439b-b828-a3c6b2a5465c",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "painkillers",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "painkillers"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "3a76f3c1-07fe-4c10-8963-e863b15d44b9",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "pregnancy",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "pregnancy"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "fda15700-e156-4bc9-bdb3-20cad634ad47",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "cardiac",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "cardiac"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "10b11dd8-2ed0-4c52-b044-d1bba6470b58",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "diabetes_hypertension",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "diabetes_hypertension"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "78df2dd0-3fae-4eac-8a4c-9f462bde8d99",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "anticoagulation",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "anticoagulation"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "563cd4ca-f704-43bb-825e-b8e214de72b8",
+                    "leftValue": "={{ $json.value }}",
+                    "rightValue": "contact_dentist",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "contact_dentist"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -4576,
+        3456
+      ],
+      "id": "86f5b86e-4c04-440d-bc3f-fa947375d8c8",
+      "name": "Health Services Router"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🩺 الخدمات الصحية والتوعية\\n\\nاختر القسم الذي تريد معرفة المزيد عنه:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🦷 تعليمات بعد خلع الأسنان\",\n          \"callback_data\": \"post_extraction\"\n        }\n      ],\n      [\n        {\n          \"text\": \"💊 المسكنات بعد علاج الأسنان\",\n          \"callback_data\": \"painkillers\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🤰 الحمل والرضاعة\",\n          \"callback_data\": \"pregnancy\"\n        }\n      ],\n      [\n        {\n          \"text\": \"❤️ أمراض القلب\",\n          \"callback_data\": \"cardiac\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🩺 مرضى السكري والضغط\",\n          \"callback_data\": \"diabetes_hypertension\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🩸 سيولة الدم ومضادات التجلط\",\n          \"callback_data\": \"anticoagulation\"\n        }\n      ],\n      [\n        {\n          \"text\": \"⚠️ متى يجب التواصل مع الطبيب؟\",\n          \"callback_data\": \"contact_dentist\"\n        }\n      ]\n    ]\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -1440,
+        2912
+      ],
+      "id": "20d391a5-a083-4a24-a2cc-3ad52cbcbf1f",
+      "name": "Health Services"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🦷 تعليمات مهمة بعد خلع الأسنان\\n\\n⏱️ أول 30–60 دقيقة:\\n• اضغط على قطعة الشاش الموضوعة فوق مكان الخلع لمدة 30–45 دقيقة، وتجنب الكلام أو رفع الشاش بشكل متكرر.\\n• إذا استمر النزيف، استبدل الشاش بقطعة نظيفة ومطوية واضغط عليه لمدة 30 دقيقة أخرى.\\n• حافظ على رفع الرأس وتجنب الاستلقاء بشكل مسطح خلال الساعات الأولى.\\n• لا تتمضمض أو تبصق بقوة، ولا تلمس مكان الخلع بلسانك أو أصابعك.\\n\\n🧊 أول 24 ساعة:\\n• ضع كمادة ثلج على الخد من الخارج لمدة 15–20 دقيقة، ثم توقف 20 دقيقة، خلال الساعات الأولى لتقليل التورم.\\n• تجنب المضمضة والبصق بقوة والتدخين واستخدام الشاليموه؛ لأن الشفط قد يؤدي إلى تحرك الجلطة الدموية والتسبب في ألم شديد.\\n• تناول أطعمة طرية وباردة أو فاترة مثل الزبادي والبطاطس المهروسة والشوربة، وتجنب الأطعمة والمشروبات الساخنة.\\n• لا تدخن ولا تتناول الكحول.\\n• تناول الأدوية الموصوفة لك حسب تعليمات طبيب الأسنان.\\n• تجنب المجهود البدني والتمارين العنيفة خلال باقي اليوم.\\n\\n📅 من اليوم الثاني:\\n• يمكنك البدء بمضمضة لطيفة بماء دافئ وملح بعد الأكل وقبل النوم، واترك الماء يخرج من الفم دون بصق قوي.\\n• ارجع لتنظيف أسنانك بلطف مع تجنب مكان الخلع مباشرةً لعدة أيام.\\n• ارجع تدريجيًا للأكل الطبيعي حسب قدرتك، مع تجنب الأطعمة القاسية أو المقرمشة أو المطاطية بالقرب من مكان الخلع.\\n• التورم والألم البسيط لمدة 2–3 أيام قد يكون طبيعيًا، والمفروض أن يتحسن تدريجيًا وليس أن يزداد.\\n\\n⚠️ تواصل مع طبيب الأسنان إذا لاحظت:\\n• نزيفًا لا يقل بعد الضغط المتكرر بالشاش.\\n• ألمًا شديدًا أو متزايدًا، خصوصًا بعد اليوم الثالث.\\n• حرارة أو قشعريرة أو زيادة في التورم بعد أول يومين.\\n• صديدًا أو طعمًا سيئًا أو رائحة كريهة.\\n• استمرار التنميل لفترة أطول من المتوقع بعد التخدير.\\n• صعوبة في البلع أو التنفس.\\n\\n📌 هذه إرشادات عامة للخلع البسيط. إذا أعطاك طبيب الأسنان تعليمات مختلفة لحالتك، فاتبع تعليماته الخاصة أولًا.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        2960
+      ],
+      "id": "9f858e85-d9ff-428b-bc67-8a86bf6e86df",
+      "name": "Post Extraction Care"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"💊 المسكنات لمرضى الأسنان\\n\\n📌 هذا المحتوى مرجع عام، وليس بديلًا عن تقييم الطبيب ومراجعة الأدوية والحالة الصحية للمريض.\\n\\n✅ الباراسيتامول:\\nيُعتبر الخيار الأول بشكل عام، وله ملف أمان جيد في الحالات المذكورة في المرجع.\\n\\n⚠️ الإيبوبروفين ومضادات الالتهاب NSAIDs:\\nتحتاج إلى الحذر أو التجنب في بعض الحالات، خصوصًا الحمل، أمراض القلب، ارتفاع ضغط الدم، واضطرابات النزيف أو استخدام مضادات التجلط.\\n\\n⚠️ ديكلوفيناك:\\nيحتاج إلى حذر، ويُتجنب في عدد من الحالات عالية الخطورة.\\n\\n⚠️ الأسبرين:\\nيحتاج إلى تقييم طبي، وقد يكون غير مناسب كمسكن في بعض حالات النزيف أو استخدام مضادات التجلط.\\n\\n⚠️ ترامادول وكودايين:\\nاستخدامهما يحتاج إلى تقييم الحالة، وبعض الفئات تحتاج إلى الحذر بشكل خاص.\\n\\n📌 لا تعتمد على هذه الرسالة لاختيار دواء أو جرعة لنفسك. يجب مراجعة الطبيب والأدوية التي تتناولها والحالة الصحية كاملة.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        3152
+      ],
+      "id": "8c78d32c-f140-45e9-a5b7-58d4f9ab4bf1",
+      "name": "Painkillers"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🤰 الحمل والرضاعة\\n\\n💊 الباراسيتامول:\\nيُذكر في المرجع كخيار مسكن أول خلال الحمل والرضاعة بالجرعات المعتادة.\\n\\n⚠️ مضادات الالتهاب NSAIDs مثل الإيبوبروفين والديكلوفيناك:\\nيجب تجنبها خصوصًا أثناء الحمل، وبالأخص بعد الأسبوع العشرين، بسبب المخاطر المذكورة في المرجع.\\n\\n🤱 أثناء الرضاعة:\\nالاستخدام القصير والعرضي لبعض مضادات الالتهاب قد يكون أقل خطورة من الحمل، لكنه يظل بحاجة إلى الحذر.\\n\\n⚠️ الكودايين:\\nيُفضل تجنبه أثناء الرضاعة بسبب احتمال حدوث تأثيرات غير متوقعة على الطفل.\\n\\n💉 التخدير الموضعي المحتوي على الإبينفرين بالجرعات المعتادة:\\nيُعتبر آمنًا بشكل عام أثناء الحمل والرضاعة وفقًا للمرجع.\\n\\n📌 اختيار الدواء والجرعة يجب أن يراعي حالتك الصحية وأي أدوية أخرى تستخدمينها.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        3344
+      ],
+      "id": "f27399be-c742-406f-abc1-557ac42f2e45",
+      "name": "Pregnancy"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"❤️ مرضى القلب\\n\\n⚠️ مضادات الالتهاب NSAIDs:\\nيُفضل تجنبها لدى مرضى فشل القلب وأمراض القلب الإقفارية أو المرضى الذين يستخدمون أدوية مضادة للصفائح أو مضادات التجلط، لأنها قد ترفع ضغط الدم وتسبب احتباس السوائل وتزيد مخاطر القلب والأوعية.\\n\\n✅ الباراسيتامول:\\nيُفضل كخيار مسكن لأنه لا يحمل نفس هذه المخاطر القلبية المذكورة.\\n\\n💉 التخدير الموضعي المحتوي على الإبينفرين:\\nيحتاج إلى استخدام حذر وجرعة محدودة لدى المرضى الذين يعانون من ذبحة صدرية غير مستقرة أو جلطة قلبية حديثة أو اضطرابات نظم غير مسيطر عليها.\\n\\n📌 في الحالات غير المستقرة، يجب اتباع توجيهات الطبيب المعالج أو طبيب القلب.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        3536
+      ],
+      "id": "b5280f4b-f5f3-4e24-b513-6d6d78f226c0",
+      "name": "Cardiac"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🩺 مرضى السكري وارتفاع ضغط الدم\\n\\n🩸 السكري:\\nلا توجد تفاعلات مباشرة كبيرة مع المسكنات المعتادة بالجرعات السنية المعتادة، لكن مضادات الالتهاب NSAIDs تحتاج إلى حذر لأنها قد تؤثر على وظائف الكلى، خصوصًا عند وجود اعتلال كلوي بسبب السكري.\\n\\n✅ الباراسيتامول:\\nيُذكر كخيار آمن بشكل عام.\\n\\n⚠️ الكورتيكوستيرويدات:\\nإذا استُخدمت كمساعدة للعلاج، فقد ترفع مستوى السكر في الدم مؤقتًا، ولذلك يجب تنسيق استخدامها مع خطة علاج السكري.\\n\\n❤️ ارتفاع ضغط الدم:\\nمضادات الالتهاب NSAIDs قد تقلل تأثير بعض أدوية الضغط وقد ترفع ضغط الدم، لذلك يُفضل تجنبها أو استخدامها لفترة قصيرة فقط تحت إشراف طبي.\\n\\n💉 التخدير الموضعي المحتوي على الإبينفرين:\\nيجب تحديد جرعته عند وجود ضغط غير مسيطر عليه.\\n\\n📌 أخبر طبيب الأسنان دائمًا بالأمراض والأدوية التي تستخدمها.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        3728
+      ],
+      "id": "798cf215-7a62-44ee-8772-d4d7de473ac1",
+      "name": "Diabetes Hypertension"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🩸 سيولة الدم ومضادات التجلط\\n\\n⚠️ الإيبوبروفين ومضادات الالتهاب NSAIDs والأسبرين:\\nقد تؤثر على الصفائح الدموية وتزيد خطر النزيف، وقد تزيد تأثير بعض مضادات التجلط مثل الوارفارين وDOACs وغيرها.\\n\\n📌 لذلك يجب تجنب الاعتماد عليها لعلاج ألم الأسنان عند المرضى الذين يتناولون مضادات التجلط إلا بعد تقييم طبي مناسب.\\n\\n✅ الباراسيتامول:\\nيُذكر كخيار مسكن مفضل لأنه لا يملك تأثيرًا مهمًا على التجلط وفقًا للمرجع.\\n\\n🦷 عند الإجراءات الجراحية:\\nالوسائل الموضعية لإيقاف النزيف مثل الغرز والشاش المساعد على إيقاف النزيف قد تكون أهم من تغيير المسكن، ويجب التخطيط للإجراء بالتنسيق مع الطبيب المسؤول عن علاج مضادات التجلط عند الحاجة.\\n\\n📌 لا توقف أو تغير دواء سيولة الدم من نفسك.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        3920
+      ],
+      "id": "ee8fcd5b-b28b-49ab-bed9-a7a0e1390c6f",
+      "name": "Anticoagulation"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"⚠️ متى يجب التواصل مع طبيب الأسنان؟\\n\\nبعد خلع الأسنان، تواصل مع طبيب الأسنان إذا لاحظت:\\n\\n🩸 نزيفًا لا يهدأ بعد الضغط المتكرر بالشاش.\\n\\n🔴 ألمًا شديدًا أو يزداد سوءًا، خصوصًا بعد اليوم الثالث.\\n\\n🌡️ حرارة أو قشعريرة أو زيادة في التورم بعد أول يومين.\\n\\n🦠 صديدًا أو طعمًا سيئًا أو رائحة كريهة من مكان الخلع.\\n\\n😶 استمرار التنميل لفترة أطول من المتوقع بعد التخدير الموضعي.\\n\\n⚠️ صعوبة في البلع أو التنفس.\\n\\n📌 هذه العلامات واردة في تعليمات ما بعد الخلع، وإذا كانت الحالة شديدة أو طارئة فلا تعتمد على البوت وحده واطلب الرعاية الطبية المناسبة.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -4352,
+        4112
+      ],
+      "id": "1f8abde6-1f87-4a8f-aafd-eff615db192a",
+      "name": "Contact Dentist"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "text": "=📅 مواعيدنا:\nكل ايام الاسبوع\nمن الساعه 4 عصرا حتى الساعه 11 مساءا",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1440,
+        3488
+      ],
+      "id": "0403fd59-c58e-4ff2-b9d9-712587eb8db7",
+      "name": "Send Schedule",
+      "webhookId": "7a7b60db-8f9d-4a71-bdbe-51aa87f4ac3e",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "text": "=📋 مراجعة الحجز\n\n📅 التاريخ: {{ $json['Selected Date'] }}\n📅 اليوم: {{ $json.Day }}\n🦷 الخدمة: {{ $json.Service }}\n👤 الاسم: {{ $json.Name }}\n📞 الهاتف: {{ $json.Phone }}\n\nهل البيانات صحيحة؟",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "نعم و اكد الحجز",
+                    "additionalFields": {
+                      "callback_data": "confirm_booking"
+                    }
+                  },
+                  {
+                    "text": "لا و الغي الحجز",
+                    "additionalFields": {
+                      "callback_data": "cancel"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -2560,
+        2496
+      ],
+      "id": "f173765b-d364-4b61-a3f0-a0b0885147f1",
+      "name": "Booking Review",
+      "webhookId": "2808039a-462f-42b0-a5bc-cfe8c205fa8a",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "confirm_booking",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "confirm"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "cancel",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "cancel"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -3232,
+        2000
+      ],
+      "id": "6eb72bd9-006d-471a-a2b7-249b0537c5dd",
+      "name": "Confirmation Router"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.available }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -2112,
+        2112
+      ],
+      "id": "a2cff63a-3f86-4487-ad74-cedf31ca3eb4",
+      "name": "Booking Guard"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "text": "=⚠️ لا يمكن تأكيد الحجز.\n\n{{ $json.duplicate ? 'لديك بالفعل حجز لنفس اليوم ورقم الدور هو ' + ($json.duplicate_booking['Queue Number'] || '') + '.' : 'اليوم ممتلئ. من فضلك اختر يوماً آخر.' }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -992,
+        2192
+      ],
+      "id": "bf95ced1-9ff1-43da-adf5-132afd30efbf",
+      "name": "Booking Guard Message",
+      "webhookId": "2808039a-462f-42b0-a5bc-cfe8c205fa8a",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "User ID",
+              "lookupValue": "={{ $('Data Normalizer').item.json.user_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2784,
+        2496
+      ],
+      "id": "4a80d572-b0b4-4c99-99b5-48ae54f0c3f0",
+      "name": "Get Session for Review",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendLocation",
+        "chatId": "={{ $('Data Normalizer').item.json.user_id }}",
+        "latitude": 30.1909605,
+        "longitude": 31.1630159,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1216,
+        2720
+      ],
+      "id": "e570f6f5-89da-4f56-bd16-7eda0315991e",
+      "name": "Send a location",
+      "webhookId": "94483851-4500-448f-bf37-1efbb3fe3c94",
+      "credentials": {
+        "telegramApi": {
+          "id": "tnd8qLxeVSXWmyxb",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendContact",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $('Data Normalizer').item.json.chat_id }}\",\n  \"phone_number\": \"01276811119\",\n  \"first_name\": \"عيادة الدكتور مصطفى خالد للأسنان\",\n  \"last_name\": \"\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -1440,
+        3296
+      ],
+      "id": "20afbd6b-d0ca-45e3-b22b-e77d0dbc2479",
+      "name": "Send Contact"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q",
+          "mode": "list",
+          "cachedResultName": "Sessions",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ngH3Yw1WWQKLzL1e5F5tdJ-TPgZ8ZHcm8yAiW9M-M4Q/edit#gid=0"
+        },
+        "startIndex": "={{ $('Get Session').item.json.row_number }}"
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -3680,
+        2496
+      ],
+      "id": "ba1a8da8-d234-4c8a-9703-7bf1634c182d",
+      "name": "Delete Session1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "f0EKIuJQZwPkFpf5",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "book",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "777158a9-e364-466e-a8b0-44236dcb591c"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e07948a6-5e9b-4bfe-bd3d-80d59bce37cb",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "service",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1fe508e8-17b8-4bd6-ae4a-ad0daead24e2",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "price",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "dbbcb235-a4e7-474e-8393-3cc718db4698",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "location",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "93facc48-865d-4440-80d9-88d9cdd9bb2c",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "connect",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "00fc1cc1-710c-4e51-ab25-19df3e2e695f",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "time",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "330c4ccb-ea5a-459c-94c6-4dbd545ca4f1",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "post_extraction",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5d2366d6-db42-4532-8819-3549c9cfa40a",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "painkillers",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "cc7f61c8-2fbc-4ba9-9392-c5bd7607ae8e",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "pregnancy",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e40277fc-264f-4e6b-9be9-1cf0d3bb4c3e",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "cardiac",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "dc176c6f-45d9-4710-9e77-32886990cfe8",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "diabetes_hypertension",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "3dc52b7c-93e0-4bb9-8c5f-f017cbdd4471",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "anticoagulation",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7b9df51c-aa37-4d30-b157-081da3977f26",
+                    "leftValue": "={{ $('Data Normalizer').item.json.value }}",
+                    "rightValue": "contact_dentist",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -3904,
+        1856
+      ],
+      "id": "2fc9945e-5668-4e42-897a-afb6ea000ee2",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "55c2aa51-c17a-4623-8e11-037df7c34572",
+              "leftValue": "={{ $json.State }}",
+              "rightValue": "waiting",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -4128,
+        2048
+      ],
+      "id": "b936eff1-742c-4086-a440-0fca07cb0fef",
+      "name": "If"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Main Menu Router": {
+      "main": [
+        [
+          {
+            "node": "Get Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Health Services",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Price",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Location",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Contact",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Schedule",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Main Menu",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Main Menu",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Main Menu",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Health Services",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Ask for Day",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Schedule": {
+      "main": [
+        [
+          {
+            "node": "Check Day Availability",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Session Router": {
+      "main": [
+        [
+          {
+            "node": "Process Selected Day",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Process Selected Service",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Process Name",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Process Phone",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Confirmation Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Selected Day": {
+      "main": [
+        [
+          {
+            "node": "Get Schedule",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Normalizer": {
+      "main": [
+        [
+          {
+            "node": "Get Session",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Main Menu Router",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Health Services Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Day Availability": {
+      "main": [
+        [
+          {
+            "node": "Calculate Booking Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Booking Date": {
+      "main": [
+        [
+          {
+            "node": "Update Session",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Bookings": {
+      "main": [
+        [
+          {
+            "node": "Get Schedule1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Queue Number": {
+      "main": [
+        [
+          {
+            "node": "Booking Guard",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Booking": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Session - Service": {
+      "main": [
+        [
+          {
+            "node": "Ask for Name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Selected Service": {
+      "main": [
+        [
+          {
+            "node": "Update Session - Service",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Session": {
+      "main": [
+        [
+          {
+            "node": "Ask for Service",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Session - Name": {
+      "main": [
+        [
+          {
+            "node": "Ask for Phone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Name": {
+      "main": [
+        [
+          {
+            "node": "Update Session - Name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Phone": {
+      "main": [
+        [
+          {
+            "node": "Update Session - Phone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Session - Phone": {
+      "main": [
+        [
+          {
+            "node": "Get Session for Review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Session Final": {
+      "main": [
+        [
+          {
+            "node": "Get Bookings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Schedule1": {
+      "main": [
+        [
+          {
+            "node": "Calculate Queue Number",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ask for Day",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Session": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Session1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Data Normalizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Confirmation": {
+      "main": [
+        [
+          {
+            "node": "Delete Session",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Health Services Router": {
+      "main": [
+        [
+          {
+            "node": "Post Extraction Care",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Painkillers",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pregnancy",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cardiac",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Diabetes Hypertension",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Anticoagulation",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Contact Dentist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Session for Review": {
+      "main": [
+        [
+          {
+            "node": "Booking Review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Confirmation Router": {
+      "main": [
+        [
+          {
+            "node": "Get Session Final",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Session": {
+      "main": [
+        [
+          {
+            "node": "Main Menu",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Booking Guard": {
+      "main": [
+        [
+          {
+            "node": "Create Booking",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Booking Guard Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Booking Guard Message": {
+      "main": [
+        [
+          {
+            "node": "Ask for Day",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Location": {
+      "main": [
+        [
+          {
+            "node": "Send a location",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Session1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Session Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Delete Session1": {
+      "main": [
+        [
+          {
+            "node": "Session Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ask for Day": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "0bf3e380-268d-46a1-ab7b-a23ba8ac3478",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2626f7dc3379e877a99720837080d17e856579db0a446242f89fcf581d6ae771"
+  },
+  "nodeGroups": [],
+  "id": "3Q0iAAnLMXsMucxM",
+  "tags": []
+}
