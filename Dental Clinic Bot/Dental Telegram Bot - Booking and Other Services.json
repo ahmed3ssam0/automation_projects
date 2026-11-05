@@ -406,7 +406,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $('Data Normalizer').item.json.chat_id }}\",\n  \"text\": \"عند بداية عملية الحجز برجاء عدم مقاطعة العملية بطلب خدمة اخرى وان فعلت يرجى في بداية عملية الحجز من جديد\\n\\nمن فضلك اختر اليوم المناسب للحجز:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"السبت\",\n          \"callback_data\": \"sat\"\n        },\n        {\n          \"text\": \"الأحد\",\n          \"callback_data\": \"sun\"\n        }\n      ],\n      [\n        {\n          \"text\": \"الإثنين\",\n          \"callback_data\": \"mon\"\n        },\n        {\n          \"text\": \"الثلاثاء\",\n          \"callback_data\": \"tue\"\n        }\n      ],\n      [\n        {\n          \"text\": \"الأربعاء\",\n          \"callback_data\": \"wed\"\n        },\n        {\n          \"text\": \"الخميس\",\n          \"callback_data\": \"thu\"\n        },\n        {\n          \"text\": \"الجمعة\",\n          \"callback_data\": \"fri\"\n        }\n      ]\n    ]\n  }\n}",
@@ -955,7 +955,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json['User ID'] }}\",\n  \"text\": \"من فضلك اختر الخدمة المناسبة:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🦷 كشف\",\n          \"callback_data\": \"check\"\n        },\n        {\n          \"text\": \"🪥 تنظيف جير\",\n          \"callback_data\": \"clean\"\n        }\n      ],\n      [\n        {\n          \"text\": \"✨ توريد لثة\",\n          \"callback_data\": \"gum\"\n        },\n        {\n          \"text\": \"😁 تقويم\",\n          \"callback_data\": \"ortho\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🦷 خلع\",\n          \"callback_data\": \"extract\"\n        },\n        {\n          \"text\": \"🦷 حشو عادي\",\n          \"callback_data\": \"filling\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🦷 حشو عصب\",\n          \"callback_data\": \"root\"\n        },\n        {\n          \"text\": \"✨ تبييض بالليزر\",\n          \"callback_data\": \"laser_white\"\n        }\n      ]\n    ]\n  }\n}",
@@ -1582,7 +1582,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $('Data Normalizer').item.json.chat_id }}\",\n  \"text\": \"أهلاً بيك في عيادة الدكتور مصطفى خالد 🦷\\nمن فضلك اختار من القائمة:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"📅 حجز موعد\",\n          \"callback_data\": \"book\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🦷 الخدمات الصحية\",\n          \"callback_data\": \"service\"\n        },\n        {\n          \"text\": \"💰 الأسعار\",\n          \"callback_data\": \"price\"\n        }\n      ],\n      [\n        {\n          \"text\": \"📍 مكان العيادة\",\n          \"callback_data\": \"location\"\n        }\n      ],\n      [\n        \n        {\n          \"text\": \"📅 المواعيد\",\n          \"callback_data\": \"time\"\n        },\n        {\n          \"text\": \"👨‍💼 تواصل مع موظف\",\n          \"callback_data\": \"connect\"\n        }\n      ]\n    ]\n  }\n}",
@@ -1941,7 +1941,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🩺 الخدمات الصحية والتوعية\\n\\nاختر القسم الذي تريد معرفة المزيد عنه:\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🦷 تعليمات بعد خلع الأسنان\",\n          \"callback_data\": \"post_extraction\"\n        }\n      ],\n      [\n        {\n          \"text\": \"💊 المسكنات بعد علاج الأسنان\",\n          \"callback_data\": \"painkillers\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🤰 الحمل والرضاعة\",\n          \"callback_data\": \"pregnancy\"\n        }\n      ],\n      [\n        {\n          \"text\": \"❤️ أمراض القلب\",\n          \"callback_data\": \"cardiac\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🩺 مرضى السكري والضغط\",\n          \"callback_data\": \"diabetes_hypertension\"\n        }\n      ],\n      [\n        {\n          \"text\": \"🩸 سيولة الدم ومضادات التجلط\",\n          \"callback_data\": \"anticoagulation\"\n        }\n      ],\n      [\n        {\n          \"text\": \"⚠️ متى يجب التواصل مع الطبيب؟\",\n          \"callback_data\": \"contact_dentist\"\n        }\n      ]\n    ]\n  }\n}",
@@ -1959,7 +1959,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🦷 تعليمات مهمة بعد خلع الأسنان\\n\\n⏱️ أول 30–60 دقيقة:\\n• اضغط على قطعة الشاش الموضوعة فوق مكان الخلع لمدة 30–45 دقيقة، وتجنب الكلام أو رفع الشاش بشكل متكرر.\\n• إذا استمر النزيف، استبدل الشاش بقطعة نظيفة ومطوية واضغط عليه لمدة 30 دقيقة أخرى.\\n• حافظ على رفع الرأس وتجنب الاستلقاء بشكل مسطح خلال الساعات الأولى.\\n• لا تتمضمض أو تبصق بقوة، ولا تلمس مكان الخلع بلسانك أو أصابعك.\\n\\n🧊 أول 24 ساعة:\\n• ضع كمادة ثلج على الخد من الخارج لمدة 15–20 دقيقة، ثم توقف 20 دقيقة، خلال الساعات الأولى لتقليل التورم.\\n• تجنب المضمضة والبصق بقوة والتدخين واستخدام الشاليموه؛ لأن الشفط قد يؤدي إلى تحرك الجلطة الدموية والتسبب في ألم شديد.\\n• تناول أطعمة طرية وباردة أو فاترة مثل الزبادي والبطاطس المهروسة والشوربة، وتجنب الأطعمة والمشروبات الساخنة.\\n• لا تدخن ولا تتناول الكحول.\\n• تناول الأدوية الموصوفة لك حسب تعليمات طبيب الأسنان.\\n• تجنب المجهود البدني والتمارين العنيفة خلال باقي اليوم.\\n\\n📅 من اليوم الثاني:\\n• يمكنك البدء بمضمضة لطيفة بماء دافئ وملح بعد الأكل وقبل النوم، واترك الماء يخرج من الفم دون بصق قوي.\\n• ارجع لتنظيف أسنانك بلطف مع تجنب مكان الخلع مباشرةً لعدة أيام.\\n• ارجع تدريجيًا للأكل الطبيعي حسب قدرتك، مع تجنب الأطعمة القاسية أو المقرمشة أو المطاطية بالقرب من مكان الخلع.\\n• التورم والألم البسيط لمدة 2–3 أيام قد يكون طبيعيًا، والمفروض أن يتحسن تدريجيًا وليس أن يزداد.\\n\\n⚠️ تواصل مع طبيب الأسنان إذا لاحظت:\\n• نزيفًا لا يقل بعد الضغط المتكرر بالشاش.\\n• ألمًا شديدًا أو متزايدًا، خصوصًا بعد اليوم الثالث.\\n• حرارة أو قشعريرة أو زيادة في التورم بعد أول يومين.\\n• صديدًا أو طعمًا سيئًا أو رائحة كريهة.\\n• استمرار التنميل لفترة أطول من المتوقع بعد التخدير.\\n• صعوبة في البلع أو التنفس.\\n\\n📌 هذه إرشادات عامة للخلع البسيط. إذا أعطاك طبيب الأسنان تعليمات مختلفة لحالتك، فاتبع تعليماته الخاصة أولًا.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -1977,7 +1977,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"💊 المسكنات لمرضى الأسنان\\n\\n📌 هذا المحتوى مرجع عام، وليس بديلًا عن تقييم الطبيب ومراجعة الأدوية والحالة الصحية للمريض.\\n\\n✅ الباراسيتامول:\\nيُعتبر الخيار الأول بشكل عام، وله ملف أمان جيد في الحالات المذكورة في المرجع.\\n\\n⚠️ الإيبوبروفين ومضادات الالتهاب NSAIDs:\\nتحتاج إلى الحذر أو التجنب في بعض الحالات، خصوصًا الحمل، أمراض القلب، ارتفاع ضغط الدم، واضطرابات النزيف أو استخدام مضادات التجلط.\\n\\n⚠️ ديكلوفيناك:\\nيحتاج إلى حذر، ويُتجنب في عدد من الحالات عالية الخطورة.\\n\\n⚠️ الأسبرين:\\nيحتاج إلى تقييم طبي، وقد يكون غير مناسب كمسكن في بعض حالات النزيف أو استخدام مضادات التجلط.\\n\\n⚠️ ترامادول وكودايين:\\nاستخدامهما يحتاج إلى تقييم الحالة، وبعض الفئات تحتاج إلى الحذر بشكل خاص.\\n\\n📌 لا تعتمد على هذه الرسالة لاختيار دواء أو جرعة لنفسك. يجب مراجعة الطبيب والأدوية التي تتناولها والحالة الصحية كاملة.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -1995,7 +1995,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🤰 الحمل والرضاعة\\n\\n💊 الباراسيتامول:\\nيُذكر في المرجع كخيار مسكن أول خلال الحمل والرضاعة بالجرعات المعتادة.\\n\\n⚠️ مضادات الالتهاب NSAIDs مثل الإيبوبروفين والديكلوفيناك:\\nيجب تجنبها خصوصًا أثناء الحمل، وبالأخص بعد الأسبوع العشرين، بسبب المخاطر المذكورة في المرجع.\\n\\n🤱 أثناء الرضاعة:\\nالاستخدام القصير والعرضي لبعض مضادات الالتهاب قد يكون أقل خطورة من الحمل، لكنه يظل بحاجة إلى الحذر.\\n\\n⚠️ الكودايين:\\nيُفضل تجنبه أثناء الرضاعة بسبب احتمال حدوث تأثيرات غير متوقعة على الطفل.\\n\\n💉 التخدير الموضعي المحتوي على الإبينفرين بالجرعات المعتادة:\\nيُعتبر آمنًا بشكل عام أثناء الحمل والرضاعة وفقًا للمرجع.\\n\\n📌 اختيار الدواء والجرعة يجب أن يراعي حالتك الصحية وأي أدوية أخرى تستخدمينها.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -2013,7 +2013,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"❤️ مرضى القلب\\n\\n⚠️ مضادات الالتهاب NSAIDs:\\nيُفضل تجنبها لدى مرضى فشل القلب وأمراض القلب الإقفارية أو المرضى الذين يستخدمون أدوية مضادة للصفائح أو مضادات التجلط، لأنها قد ترفع ضغط الدم وتسبب احتباس السوائل وتزيد مخاطر القلب والأوعية.\\n\\n✅ الباراسيتامول:\\nيُفضل كخيار مسكن لأنه لا يحمل نفس هذه المخاطر القلبية المذكورة.\\n\\n💉 التخدير الموضعي المحتوي على الإبينفرين:\\nيحتاج إلى استخدام حذر وجرعة محدودة لدى المرضى الذين يعانون من ذبحة صدرية غير مستقرة أو جلطة قلبية حديثة أو اضطرابات نظم غير مسيطر عليها.\\n\\n📌 في الحالات غير المستقرة، يجب اتباع توجيهات الطبيب المعالج أو طبيب القلب.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -2031,7 +2031,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🩺 مرضى السكري وارتفاع ضغط الدم\\n\\n🩸 السكري:\\nلا توجد تفاعلات مباشرة كبيرة مع المسكنات المعتادة بالجرعات السنية المعتادة، لكن مضادات الالتهاب NSAIDs تحتاج إلى حذر لأنها قد تؤثر على وظائف الكلى، خصوصًا عند وجود اعتلال كلوي بسبب السكري.\\n\\n✅ الباراسيتامول:\\nيُذكر كخيار آمن بشكل عام.\\n\\n⚠️ الكورتيكوستيرويدات:\\nإذا استُخدمت كمساعدة للعلاج، فقد ترفع مستوى السكر في الدم مؤقتًا، ولذلك يجب تنسيق استخدامها مع خطة علاج السكري.\\n\\n❤️ ارتفاع ضغط الدم:\\nمضادات الالتهاب NSAIDs قد تقلل تأثير بعض أدوية الضغط وقد ترفع ضغط الدم، لذلك يُفضل تجنبها أو استخدامها لفترة قصيرة فقط تحت إشراف طبي.\\n\\n💉 التخدير الموضعي المحتوي على الإبينفرين:\\nيجب تحديد جرعته عند وجود ضغط غير مسيطر عليه.\\n\\n📌 أخبر طبيب الأسنان دائمًا بالأمراض والأدوية التي تستخدمها.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -2049,7 +2049,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"🩸 سيولة الدم ومضادات التجلط\\n\\n⚠️ الإيبوبروفين ومضادات الالتهاب NSAIDs والأسبرين:\\nقد تؤثر على الصفائح الدموية وتزيد خطر النزيف، وقد تزيد تأثير بعض مضادات التجلط مثل الوارفارين وDOACs وغيرها.\\n\\n📌 لذلك يجب تجنب الاعتماد عليها لعلاج ألم الأسنان عند المرضى الذين يتناولون مضادات التجلط إلا بعد تقييم طبي مناسب.\\n\\n✅ الباراسيتامول:\\nيُذكر كخيار مسكن مفضل لأنه لا يملك تأثيرًا مهمًا على التجلط وفقًا للمرجع.\\n\\n🦷 عند الإجراءات الجراحية:\\nالوسائل الموضعية لإيقاف النزيف مثل الغرز والشاش المساعد على إيقاف النزيف قد تكون أهم من تغيير المسكن، ويجب التخطيط للإجراء بالتنسيق مع الطبيب المسؤول عن علاج مضادات التجلط عند الحاجة.\\n\\n📌 لا توقف أو تغير دواء سيولة الدم من نفسك.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -2067,7 +2067,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendMessage",
+        "url": "https://api.telegram.org/botTOKEN/sendMessage",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $json.user_id }}\",\n  \"text\": \"⚠️ متى يجب التواصل مع طبيب الأسنان؟\\n\\nبعد خلع الأسنان، تواصل مع طبيب الأسنان إذا لاحظت:\\n\\n🩸 نزيفًا لا يهدأ بعد الضغط المتكرر بالشاش.\\n\\n🔴 ألمًا شديدًا أو يزداد سوءًا، خصوصًا بعد اليوم الثالث.\\n\\n🌡️ حرارة أو قشعريرة أو زيادة في التورم بعد أول يومين.\\n\\n🦠 صديدًا أو طعمًا سيئًا أو رائحة كريهة من مكان الخلع.\\n\\n😶 استمرار التنميل لفترة أطول من المتوقع بعد التخدير الموضعي.\\n\\n⚠️ صعوبة في البلع أو التنفس.\\n\\n📌 هذه العلامات واردة في تعليمات ما بعد الخلع، وإذا كانت الحالة شديدة أو طارئة فلا تعتمد على البوت وحده واطلب الرعاية الطبية المناسبة.\",\n\n\"reply_markup\": {\n    \"inline_keyboard\": [\n      [{\"text\": \"🔙 الخدمات الصحية\", \"callback_data\": \"health_menu\"}],\n      [{\"text\": \"🏠 القائمة الرئيسية\", \"callback_data\": \"main_menu\"}]\n    ]\n  }\n\n}",
@@ -2340,7 +2340,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.telegram.org/bot8905324961:AAEn8ER0uYGLBsnNlp2MqmvW4u6AkNK3sbk/sendContact",
+        "url": "https://api.telegram.org/botTOKEN/sendContact",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"chat_id\": \"{{ $('Data Normalizer').item.json.chat_id }}\",\n  \"phone_number\": \"01276811119\",\n  \"first_name\": \"عيادة الدكتور مصطفى خالد للأسنان\",\n  \"last_name\": \"\"\n}",
